@@ -6,17 +6,7 @@ swApp = win32.Dispatch("Sldworks.application")            #引入sldworks接口
 swApp.Visible = True                                      #是否可视化
 arg_Nothing = win32.VARIANT(pythoncom.VT_DISPATCH, None)   #转义VBA中不同变量nothing
 
-import win32com.client as win32
-import pythoncom
-from swconst import constants
-import os
-
-
-swApp = win32.Dispatch("Sldworks.application")            #引入sldworks接口
-swApp.Visible = True                                      #是否可视化
-arg_Nothing = win32.VARIANT(pythoncom.VT_DISPATCH, None)   #转义VBA中不同变量nothing
-
-os.system("C:\\SOLIDWORKS Corp\\SOLIDWORKS\\SLDWORKS.exe")#运行SolidWorks
+# os.system("C:\\SOLIDWORKS Corp\\SOLIDWORKS\\SLDWORKS.exe")#运行SolidWorks
 swApp.NewDocument("C:\\ProgramData\\SolidWorks\\SOLIDWORKS 2019\\templates\\gb_part.prtdot", 0, 0, 0)#新建一个国标零件
 # longstatus = Part.SaveAs3("C:\\Users\\xls\\Desktop\\sw_exercise\\test1.SLDPRT", 0, 2)
 # swApp.ActivateDoc2("零件1", False, longstatus)
